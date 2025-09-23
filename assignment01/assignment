@@ -36,7 +36,7 @@ Explanation of the Command:
   -p 5678:5678 ->Map host port 5678 to container port 5678
   -v ~/.n8n:/home/node/.n8n ->Persist workflows by mapping local folder to container folder
   n8nio/n8n ->Official n8n image from Docker Hub
-Visit this link to get the screenshot https://github.com/LiyimingKyle/Cloud-Computing-Labs/blob/main/assigment_images/run_8n8_docker.jpg
+Visit this link to get the screenshot https://github.com/LiyimingKyle/Cloud-Computing-Labs/blob/main/assigment01/assigment_images/run_8n8_docker.jpg
 Step 2: Access n8n
 Open your browser and go to:http://127.0.0.1:5678
-Visit this link to get the screenshot https://github.com/LiyimingKyle/Cloud-Computing-Labs/blob/main/assigment_images/8n8_screenshot.png
+Visit this link to get the screenshot https://github.com/LiyimingKyle/Cloud-Computing-Labs/blob/main/assigment01/assigment_images/8n8_screenshot.png
