@@ -1,0 +1,42 @@
+Q1:
+IaaS: Provides virtualized computing resources (servers, storage, and networking) over the internet. Users are responsible for managing the operating system, middleware, and applications.
+Example: A development team rents Amazon EC2 (AWS) virtual machines to set up testing environments.
+PaaS: Abstracts hardware and operating system details, allowing seamless scalability. Developers only need to focus on their business logic, not the underlying infrastructure.
+Example: Developers deploy apps on Google App Engine, which handles scaling and runtime.
+SaaS: Software development, management, and deployment are outsourced to a third party, eliminating technical concerns and allowing for ready-to-use services. Services typically used by ordinary users are SaaS.
+Example: Teams uses GitHub or Jira for project management and collaboration.
+In short: SaaS → Closest to users: Ready-made software, ready to use (examples: Gmail, Slack).
+PaaS → Developer-oriented: Provides an application runtime environment, focusing on business logic (examples: Heroku, App Engine).
+IaaS → Lowest level: Provides virtual machines, storage, and networking, allowing you to set up the environment (examples: AWS EC2, Azure VMs).
+Q2:
+What is Docker?
+Docker is an open-source application container engine, built on the Go language and licensed under the Apache 2.0 license. 
+It allows developers to package their applications and their dependencies into lightweight, portable containers, which can then be deployed to any popular Linux machine, enabling virtualization. 
+Containers are fully sandboxed, with no interfaces between them (similar to iPhone apps). More importantly, containers offer extremely low performance overhead. 
+It unleashes the power of computing virtualization, significantly improving application maintenance efficiency and reducing the cost of cloud computing application development.
+Scenario
+A RESTful API built with Node.js may fail on another machine due to version mismatches. By containerizing with Docker, the same environment runs everywhere.
+CI/CD pipeline: Integrate with Jenkins/GitLab CI to achieve automated building and testing.
+Cloud native foundation: Orchestration tools such as Kubernetes manage container clusters based on Docker.
+Contribution
+Consistency: Same environment across dev/test/prod.
+Isolation: No conflicts with other applications.
+Scalability: Containers can be replicated and orchestrated with Kubernetes.
+Efficiency: Containers are lightweight compared to virtual machines.
+Q3:
+Step 1: Run n8n with Docker
+  docker run -it --rm \
+    -p 5678:5678 \
+    -v ~/.n8n:/home/node/.n8n \
+    n8nio/n8n
+Explanation of the Command:
+  docker run ->Start a new container
+  -it ->Run interactively with a terminal
+  --rm ->Remove container automatically when stopped
+  -p 5678:5678 ->Map host port 5678 to container port 5678
+  -v ~/.n8n:/home/node/.n8n ->Persist workflows by mapping local folder to container folder
+  n8nio/n8n ->Official n8n image from Docker Hub
+Visit this link to get the screenshot https://github.com/LiyimingKyle/Cloud-Computing-Labs/blob/main/assigment_images/run_8n8_docker.jpg
+Step 2: Access n8n
+Open your browser and go to:http://127.0.0.1:5678
+Visit this link to get the screenshot https://github.com/LiyimingKyle/Cloud-Computing-Labs/blob/main/assigment_images/8n8_screenshot.png
